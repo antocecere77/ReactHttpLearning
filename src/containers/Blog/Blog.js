@@ -8,6 +8,13 @@ import './Blog.css';
 
 class Blog extends Component {
 
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(response => {
+                console.log(response);
+            });
+    }
+
     render () {
         return (
             <div>
